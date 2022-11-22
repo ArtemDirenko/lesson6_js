@@ -57,13 +57,24 @@
 //     let nums = [11,21,3];
 // sortNums(nums,'ascending') // [3,11,21]
 // sortNums(nums,'descending') // [21,11,3]
-//
-//
-// let nums = [11,21,3];
-// nums.sort(function (a, b){
-//         return a-b;}
-// )
-// console.log(nums)
+
+
+function sortNums(numbers, direction) {
+    if (direction === 'ascending') {
+        numbers.sort(function (a, b){
+            return a-b;}
+        )
+    } else {
+        numbers.sort(function (a, b){
+            return b-a;}
+        )
+    }
+    console.log(numbers)
+}
+
+let nums = [11,21,3];
+sortNums(nums,'ascending') // [3,11,21]
+sortNums(nums,'descending') // [21,11,3]
 //
 // let nums = [11,21,3];
 // nums.sort(function (a, b){
@@ -117,231 +128,193 @@
  let cards = [
      {
          cardSuit: 'spade',
-         value: '6',
+         value: 6,
          color: 'black',
-         number: 6,
      },
      {
          cardSuit: 'diamond',
-         value: '6',
+         value: 6,
          color: 'red',
-         number: 6,
      },
      {
          cardSuit: 'heart',
-         value: '6',
+         value: 6,
          color: 'red',
-         number: 6,
      },
      {
          cardSuit: 'clubs',
-         value: '6',
+         value: 6,
          color: 'black',
-         number: 6,
      },
      {
          cardSuit: 'spade',
-         value: '7',
+         value: 7,
          color: 'black',
-         number: 7,
      },
      {
          cardSuit: 'diamond',
-         value: '7',
+         value: 7,
          color: 'red',
-         number: 7,
      },
      {
          cardSuit: 'heart',
-         value: '7',
+         value: 7,
          color: 'red',
-         number: 7,
      },
      {
          cardSuit: 'clubs',
-         value: '7',
+         value: 7,
          color: 'black',
-         number: 7,
      },
      {
          cardSuit: 'spade',
-         value: '8',
+         value: 8,
          color: 'black',
-         number: 8,
      },
      {
          cardSuit: 'diamond',
-         value: '8',
+         value: 8,
          color: 'red',
-         number: 8,
      },
      {
          cardSuit: 'heart',
-         value: '8',
+         value: 8,
          color: 'red',
-         number: 8,
      },
      {
          cardSuit: 'clubs',
-         value: '8',
+         value: 8,
          color: 'black',
-         number: 8,
      },
      {
          cardSuit: 'spade',
-         value: '9',
+         value: 9,
          color: 'black',
-         number: 9,
      },
      {
          cardSuit: 'diamond',
-         value: '9',
+         value: 9,
          color: 'red',
-         number: 9,
      },
      {
          cardSuit: 'heart',
-         value: '9',
+         value: 9,
          color: 'red',
-         number: 9,
      },
      {
          cardSuit: 'clubs',
-         value: '9',
+         value: 9,
          color: 'black',
-         number: 9,
      },
      {
          cardSuit: 'spade',
-         value: '10',
+         value: 10,
          color: 'black',
-         number: 10,
      },
      {
          cardSuit: 'diamond',
-         value: '10',
+         value: 10,
          color: 'red',
-         number: 10,
      },
      {
          cardSuit: 'heart',
-         value: '10',
+         value: 10,
          color: 'red',
-         number: 10,
      },
      {
          cardSuit: 'clubs',
-         value: '10',
+         value: 10,
          color: 'black',
-         number: 10,
      },
      {
          cardSuit: 'spade',
          value: 'jack',
          color: 'black',
-         number: 11,
      },
      {
          cardSuit: 'diamond',
          value: 'jack',
          color: 'red',
-         number: 11,
      },
      {
          cardSuit: 'heart',
          value: 'jack',
          color: 'red',
-         number: 11,
      },
      {
          cardSuit: 'clubs',
          value: 'jack',
          color: 'black',
-         number: 11,
      },
      {
          cardSuit: 'spade',
          value: 'queen',
          color: 'black',
-         number: 12,
      },
      {
          cardSuit: 'diamond',
          value: 'queen',
          color: 'red',
-         number: 12,
      },
      {
          cardSuit: 'heart',
          value: 'queen',
          color: 'red',
-         number: 12,
      },
      {
          cardSuit: 'clubs',
          value: 'queen',
          color: 'black',
-         number: 12,
      },
      {
          cardSuit: 'spade',
          value: 'king',
          color: 'black',
-         number: 13,
      },
      {
          cardSuit: 'diamond',
          value: 'king',
          color: 'red',
-         number: 13,
      },
      {
          cardSuit: 'heart',
          value: 'king',
          color: 'red',
-         number: 13,
      },
      {
          cardSuit: 'clubs',
          value: 'king',
          color: 'black',
-         number: 13,
      },
      {
          cardSuit: 'spade',
          value: 'ace',
          color: 'black',
-         number: 14,
      },
      {
          cardSuit: 'diamond',
          value: 'ace',
          color: 'red',
-         number: 14,
      },
      {
          cardSuit: 'heart',
          value: 'ace',
          color: 'red',
-         number: 14,
      },
      {
          cardSuit: 'clubs',
          value: 'ace',
          color: 'black',
-         number: 14,
      },
      {
          cardSuit: '',
          value: 'joker',
          color: 'black',
-         number: 15,
      },
      {
          cardSuit: '',
          value: 'joker',
          color: 'red',
-         number: 15,
      }
  ];
 console.log(cards)
@@ -352,7 +325,7 @@ let picoviiTuz = cards.filter((card)=>{
 console.log(picoviiTuz)
 
 let sixCards = cards.filter((card)=>{
-    return card.value === '6'
+    return card.value === 6
 })
 
 console.log(sixCards)
@@ -372,7 +345,7 @@ console.log(diamondCards)
 console.log(cards)
 
 let clubsCards = cards.filter((card)=>{
-    return card.cardSuit === 'clubs' && card.number > 9
+    return card.cardSuit === 'clubs' && (card.value > 9 || typeof card.value === 'string')
 })
 
 console.log(clubsCards)
